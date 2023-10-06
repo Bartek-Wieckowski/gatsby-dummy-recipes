@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="footer">
-        <h2>Hello from footer</h2>
+    <footer className="page-footer">
+      <p>
+        &copy; {new Date().getFullYear()} <span>DummyRecipes</span> Built with{" "}
+        <a href="https://www.gatsbyjs.com/">Gatsby.js</a>
+      </p>
     </footer>
-  )
+  );
 }
