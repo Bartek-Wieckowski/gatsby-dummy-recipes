@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import Layout from "../components/Layout";
 
 export default function Contact() {
   return (
-    <div>contact</div>
-  )
+    <Layout>
+      <div>Contact pages</div>
+    </Layout>
+  );
 }
