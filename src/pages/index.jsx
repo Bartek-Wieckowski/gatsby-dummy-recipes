@@ -1,11 +1,28 @@
 import React from "react";
 import Layout from "../components/Layout";
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function Home() {
   return (
     <div className="app">
       <Layout>
-        <h1>Hello peopleeee</h1>
+        <main className="page">
+          <header className="hero">
+            <StaticImage
+              src="../assets/images/main.jpeg"
+              alt="example home img"
+              className="hero-img"
+              placeholder="tracedSVG"
+              layout="fullWidth"
+            />
+            <div className="hero-container">
+              <div className="hero-text">
+                <h1>Dummy recipes</h1>
+                <h4>no fluff, just recipes</h4>
+              </div>
+            </div>
+          </header>
+        </main>
       </Layout>
     </div>
   );
