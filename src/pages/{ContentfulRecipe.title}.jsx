@@ -4,6 +4,8 @@ import React from "react";
 import { BsClockHistory, BsClock, BsPeople } from "react-icons/bs";
 import Layout from "../components/Layout";
 import slugify from "slugify";
+import SEO from "../components/SEO";
+
 
 export const query = graphql`
   query getSingleRecipe($title: String) {
@@ -43,6 +45,7 @@ export default function RecipeTemplate({ data }) {
   return (
     <div>
       <Layout>
+      <SEO title={title} />
         <main className="page">
           <div className="recipe-page">
             <section className="recipe-hero">

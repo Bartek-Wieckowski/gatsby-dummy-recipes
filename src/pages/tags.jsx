@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import { graphql, Link } from "gatsby";
 import setupTags from "../utils/setupTags";
 import slugify from "slugify";
+import SEO from "../components/SEO";
 
 export const query = graphql`
   query {
@@ -22,6 +23,7 @@ export default function Tags({ data }) {
   
   return (
     <Layout>
+      <SEO title="Tags Page"/>
       <main className="page">
         <section className="tags-page">
           {newTags.map((tag, index) => {

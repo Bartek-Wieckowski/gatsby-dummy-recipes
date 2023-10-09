@@ -3,6 +3,8 @@ import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link, graphql } from "gatsby";
 import RecipesList from "../components/RecipesList";
+import SEO from "../components/SEO";
+
 
 export const query = graphql`
   query {
@@ -24,6 +26,7 @@ export default function About({ data }) {
   const recipes = data.allContentfulRecipe.nodes
   return (
     <Layout>
+      <SEO title="About Page" description="This is About Page men!"/>
       <main className="page">
         <section className="about-page">
           <article>
