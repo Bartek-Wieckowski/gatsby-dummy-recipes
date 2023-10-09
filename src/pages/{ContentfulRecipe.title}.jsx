@@ -69,7 +69,7 @@ export default function RecipeTemplate({ data }) {
                 </div>
                 <p className="recipe-tags">
                   Tags:
-                  {tags.map((tag, index) => {
+                  {tags?.map((tag, index) => {
                     const slug = slugify(tag, { lower: true });
 
                     return (
@@ -84,7 +84,7 @@ export default function RecipeTemplate({ data }) {
             <section className="recipe-content">
               <article>
                 <h4>instructions</h4>
-                {instructions.map((item, index) => {
+                {instructions?.map((item, index) => {
                   return (
                     <div key={index} className="single-instruction">
                       <header>
@@ -99,7 +99,7 @@ export default function RecipeTemplate({ data }) {
               <article className="second-column">
                 <div>
                   <h4>ingredients</h4>
-                  {ingredients.map((item, index) => {
+                  {ingredients?.map((item, index) => {
                     return (
                       <p key={index} className="single-ingredient">
                         {item}
@@ -109,7 +109,7 @@ export default function RecipeTemplate({ data }) {
                 </div>
                 <div>
                   <h4>tools</h4>
-                  {tools.map((item, index) => {
+                  {tools?.map((item, index) => {
                     return (
                       <p key={index} className="single-tool">
                         {item}
